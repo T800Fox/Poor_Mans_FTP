@@ -88,6 +88,8 @@ class fileServ:
                 while transmit:
                     pc.send(transmit)
                     transmit = f.read(1024)
+                pc.close()
+                return 1
 
     # modular method for cleaning the clients input:
     def takeSelection(self, byteInput, client):
